@@ -32,41 +32,41 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Task 1
-        //        let value1 = 2.5
-        //        let value2 = 9.7
-        //        let value3 = 6.9
-        //        let value4 = 8.2
-        //
-        //        let newValue1 = modf(value1)
-        //        let newValue2 = modf(value2)
-        //        let newValue3 = modf(value3)
-        //        let newValue4 = modf(value4)
-        //
-        //        let vholePart = newValue1.0 + newValue2.0 + newValue3.0 + newValue4.0
-        //        print("Sum whole part of numbers is: \(vholePart)")
-        //
-        //        let fractionalPart = newValue1.1 + newValue2.1 + newValue3.1 + newValue4.1
-        //        let formFractionalPart = String(format: "%.1f", fractionalPart)
-        //        print("Sum fractional part of numbers is: \(formFractionalPart)")
+// Task 1
+//        let value1 = 2.5
+//        let value2 = 9.7
+//        let value3 = 6.9
+//        let value4 = 8.2
+//
+//        let newValue1 = modf(value1)
+//        let newValue2 = modf(value2)
+//        let newValue3 = modf(value3)
+//        let newValue4 = modf(value4)
+//
+//        let vholePart = newValue1.0 + newValue2.0 + newValue3.0 + newValue4.0
+//        print("Sum whole part of numbers is: \(vholePart)")
+//
+//        let fractionalPart = newValue1.1 + newValue2.1 + newValue3.1 + newValue4.1
+//        let formFractionalPart = String(format: "%.1f", fractionalPart)
+//        print("Sum fractional part of numbers is: \(formFractionalPart)")
         
-        // Task 2
-        //        let myStringOne = "There are more than fifteen characters in this line"
-        //        let myStringTwo = "Few characters!"
-        //        let myStringThree = "Empty"
-        //
-        //        let stringArray = [myStringOne, myStringTwo, myStringThree]
-        //        let myRandom = stringArray.randomElement()!
-        //
-        //        if myRandom.count > 15 {
-        //            print("There are more than 15 characters in a line")
-        //        } else if myRandom.count == 15 {
-        //            print("There are 15 characters in a line")
-        //        } else {
-        //            print("There are less than 15 characters in a line")
-        //        }
+// Task 2
+//        let myStringOne = "There are more than fifteen characters in this line"
+//        let myStringTwo = "Few characters!"
+//        let myStringThree = "Empty"
+//
+//        let stringArray = [myStringOne, myStringTwo, myStringThree]
+//        let myRandom = stringArray.randomElement()!
+//
+//        if myRandom.count > 15 {
+//            print("There are more than 15 characters in a line")
+//        } else if myRandom.count == 15 {
+//            print("There are 15 characters in a line")
+//        } else {
+//            print("There are less than 15 characters in a line")
+//        }
         
-        // Task 3
+// Task 3
 //        var b: Double = -22.0
 //        var c: Int = 4
 //        var d: Int = 9
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
 //        let a: Int = Int(b) * 25 - value * d / Int(e)
 //        print(a)
         
-        // Task 4
+// Task 4
 //        let a = Int.random(in: 1 ... 103)
 //
 //        switch a {
@@ -108,7 +108,7 @@ class ViewController: UIViewController {
 //            print("default")
 //        }
         
-        // Task 5
+// Task 5
 //        let a = "15"
 //        let b = "13.3"
 //
@@ -117,6 +117,47 @@ class ViewController: UIViewController {
 //        let result = myInt1 + myInt2
 //        print(result)
         
+// Task 6
+//
+//        func powerOfValue(power: Int, value: Int) {
+//            let result = Int(pow(Double(value),Double(power)))
+//            print("\(value) возвести в \(power) степень, будет \(result)")
+//        }
+//        powerOfValue(power: 3, value: 5)
+
+// Task 7
+        
+//        func revertString(string: String) {
+//            let result = String(string.reversed())
+//            print(result)
+//        }
+//
+//        revertString(string: "Some text for reverse")
+        
+// Task 8
+        
+/*
+ Написать и вызвать функцию, которая будет удалять пробелы из строки и выводить как camel case (func camelCaseString(string: String) -> String)
+ Пример вызова: camelCaseString(string: "Some text for camel case")
+ Результат: "SomeTextForCamelCase"
+ */
+        
+        func camelCaseString(string: String) {
+            let formatString = string.capitalized
+            let result = formatString.filter({$0 != " "})
+            print(result)
+        }
+        camelCaseString(string: "Some text for camel case")
     }
 }
 
+extension String {
+    func capitalize() -> String {
+        let arr = self.split(separator: " ").map{String($0)}
+        var result = [String]()
+        for element in arr {
+            result.append(String(element.uppercased().first ?? " ") + element.suffix(element.count-1))
+        }
+        return result.joined(separator: " ")
+    }
+}
