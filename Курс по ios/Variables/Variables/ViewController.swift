@@ -24,6 +24,7 @@
  8) Написать и вызвать функцию, которая будет удалять пробелы из строки и выводить как camel case (func camelCaseString(string: String) -> String)
   Пример вызова: camelCaseString(string: "Some text for camel case")
   Результат: "SomeTextForCamelCase"
+ test
  */
 
 
