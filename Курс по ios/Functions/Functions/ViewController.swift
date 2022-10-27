@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 // Task 2
 //        calcNumbers(value: 1993)
 // Task 3
-//        compareString(str1: randomString(), str2: randomString())
+        compareString(str1: randomString(), str2: randomString())
 // Task 4
 //        recurse()
     }
