@@ -23,14 +23,75 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-
+// Task 1
+//        sum(value1: 5, value2: 6)
+//        dif(value1: 40, value2: 342)
+//        increase(value1: 3, value2: 2)
+//        division(value1: 45, value2: 34)
+// Task 2
+//        calcNumbers(value: 1993)
+// Task 3
+//        compareString(str1: randomString(), str2: randomString())
+// Task 4
+//        recurse()
     }
-
-
+    
+    func sum(value1: Int, value2: Int){
+        let resultSum = value1 + value2
+        print(resultSum)
+    }
+    
+    func dif(value1: Int, value2: Int){
+        let resultDif = value1 - value2
+        print(resultDif)
+    }
+    
+    func increase(value1: Int, value2: Int){
+        let resultIncrease = value1 * value2
+        print(resultIncrease)
+    }
+    
+    func division(value1: Int, value2: Int){
+        let resultDivision = value1 / value2
+        print(resultDivision)
+    }
+    
+    func calcNumbers(value: Int) {
+        let valueToString = String(value)
+        let arrayOfElement = valueToString.compactMap{ $0.wholeNumberValue }
+        let totalSum = arrayOfElement.reduce(0, +)
+        print(totalSum)
+    }
+    
+    func compareString(str1: String, str2: String) {
+        if str1.count > str2.count {
+            print("\(str1.count) символов в строке\n[\(str1)]\nбольше чем\n\(str2.count) символов в строке [\(str2)]")
+        } else if str2.count > str1.count {
+            print("\(str1.count) символов в строке\n[\(str1)]\nменьше чем\n\(str2.count) символов в строке [\(str2)]")
+        } else {
+            print("строки равны")
+        }
+    }
+    
+    func randomString() -> String {
+        let length = Int.random(in: 20..<300)
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
+    func recurse() {
+        let value = 10000000000
+        let result = value + 1
+        if result > value {
+            print(result)
+            recurse()
+        }
+    }
 }
+
 
