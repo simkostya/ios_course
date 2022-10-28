@@ -36,9 +36,18 @@ class ViewController: UIViewController {
 // Task 2
 //        calcNumbers(value: 1993)
 // Task 3
-        compareString(str1: randomString(), str2: randomString())
+//        compareString(str1: randomString(), str2: randomString())
 // Task 4
 //        recurse()
+// Task 5
+//        makePow(myValue: 12)
+//        makePow(myValue: 12, myPow: 3)
+//
+// Task 6
+//        modifyString(myString: "my String witj emoji")
+//
+//        factorial(n: 22)
+//        fibonacci(n: 10)
     }
     
     func sum(value1: Int, value2: Int){
@@ -91,6 +100,37 @@ class ViewController: UIViewController {
             print(result)
             recurse()
         }
+    }
+    
+    func makePow (myValue: Int, myPow: Int = 2) {
+        let resultPow = pow(Decimal(myValue), myPow)
+        print("Число \(myValue) в степени \(myPow) равно: \(resultPow)")
+    }
+    
+    func modifyString(myString: String) {
+        let smileString = " 😆🙂🥰😚😜😝😙🙂🥲🥹😃😄"
+        let newString = myString.appending(smileString)
+        print(newString)
+    }
+    
+    func factorial(n: Int) {
+        guard n < 20 else { return print("Факториал числа \(n) не вычислен, введите число меньше 20")}
+        var result = 1
+        if(n > 0) {
+            for i in 1...n {
+                result *= i
+            }
+        }
+        print("Факториал числа \(n) равно \(result)")
+    }
+    
+    func fibonacci(n: Int){
+        assert(n > 1)
+        var array = [0, 1]
+        while array.count < n {
+            array.append(array[array.count - 1] + array[array.count - 2])
+        }
+        print("Последовательность Фибоначчи из числа \(n): \(array)")
     }
 }
 
