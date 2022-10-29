@@ -1,0 +1,16 @@
+PODS:
+  - TGLParallaxCarousel (0.2.1)
+
+DEPENDENCIES:
+  - TGLParallaxCarousel
+
+SPEC REPOS:
+  trunk:
+    - TGLParallaxCarousel
+
+SPEC CHECKSUMS:
+  TGLParallaxCarousel: 7736edf9e26a3f08f32d0a24fcb0c93edc8253ad
+
+PODFILE CHECKSUM: 358d745efaa1325723c3822cb1d352a9709c4193
+
+COCOAPODS: 1.11.3
