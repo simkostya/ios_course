@@ -12,9 +12,9 @@ class Drink {
     let name: String
     let price: Int
     let country: String
-    var balance: Double
+    var balance: Int
     
-    init(name: String, price: Int, country: String, balance: Double) {
+    init(name: String, price: Int, country: String, balance: Int) {
         self.name = name
         self.price = price
         self.country = country

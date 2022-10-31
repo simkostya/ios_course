@@ -12,11 +12,11 @@ import UIKit
 class DrinkShop {
     static let shared = DrinkShop()
     var totalCash = 0
-    var totalVolume = 0.0
+    var totalVolume = 0
     // function buying beer
     func buyIt(_ n: Drink) {
         totalCash += n.price
-        totalVolume += 0.5
-        n.balance -= 0.5
+        totalVolume += 1
+        n.balance -= 1
     }
 }
