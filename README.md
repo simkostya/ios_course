@@ -1,1 +1,2 @@
-# ios_course
+# Практика в рамках курса <TeachMeSkills> iOS Developer
+
