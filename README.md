@@ -1,2 +1,2 @@
-# Практика в рамках курса <TeachMeSkills> iOS Developer
+# Практика в рамках курса "TeachMeSkills" - iOS Developer
 
